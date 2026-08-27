@@ -1,0 +1,112 @@
+{
+  "updated": "2026-08-27",
+  "sections": [
+    {
+      "eyebrow": "FILE 01",
+      "title": "Eligibility Tools",
+      "note": "Check your attempts before you plan anything else.",
+      "items": [
+        {
+          "tag": "TOOL",
+          "title": "NDA Eligibility Checker",
+          "desc": "Find your last eligible NDA attempt by date of birth.",
+          "url": "https://tranquilizer014.blogspot.com/2025/02/nda-elegibility-checker-by-date-of-birth.html"
+        },
+        {
+          "tag": "TOOL",
+          "title": "CDS Eligibility Checker",
+          "desc": "Find your last eligible CDS attempt by date of birth.",
+          "url": "https://tranquilizer014.blogspot.com/2025/02/cds-eligibility-checker.html"
+        }
+      ]
+    },
+    {
+      "eyebrow": "FILE 02",
+      "title": "Guides",
+      "note": "Start here if you're new to the process.",
+      "items": [
+        {
+          "tag": "GUIDE",
+          "title": "NDA Guide",
+          "desc": "Full walkthrough of the National Defence Academy entry.",
+          "url": "https://tranquilizer014.blogspot.com/2025/02/nda-national-defence-academy-entry.html"
+        },
+        {
+          "tag": "GUIDE",
+          "title": "CDS Guide",
+          "desc": "Full walkthrough of the Combined Defence Services entry.",
+          "url": "https://tranquilizer014.blogspot.com/2025/02/combined-defence-services-cds.html"
+        }
+      ]
+    },
+    {
+      "eyebrow": "FILE 03",
+      "title": "Prep Batches",
+      "note": "Structured video courses with watch-progress tracking.",
+      "items": [
+        {
+          "tag": "BATCH",
+          "title": "Bravo Batch — NDA",
+          "desc": "Full NDA video course, mark lectures done as you go.",
+          "url": "https://tranquilizer014.blogspot.com/2026/05/bravo-batch.html"
+        },
+        {
+          "tag": "BATCH",
+          "title": "Alpha Batch — CDS",
+          "desc": "Full CDS video course, mark lectures done as you go.",
+          "url": "https://tranquilizer014.blogspot.com/2026/05/alpha-batch.html"
+        }
+      ]
+    },
+    {
+      "eyebrow": "FILE 04",
+      "title": "Study Material",
+      "note": "Lectures, themes, and downloadable notes.",
+      "items": [
+        {
+          "tag": "MATERIAL",
+          "title": "Essential YouTube Lectures",
+          "desc": "Curated list of lectures worth covering first.",
+          "url": "https://tranquilizer014.blogspot.com/2026/03/cover-these.html"
+        },
+        {
+          "tag": "MATERIAL",
+          "title": "SSB Themes",
+          "desc": "Common SSB themes to prepare in advance.",
+          "url": "https://tranquilizer014.blogspot.com/2026/03/ssb-themes.html"
+        },
+        {
+          "tag": "MATERIAL",
+          "title": "Resources Drive",
+          "desc": "Shared Google Drive folder of prep resources.",
+          "url": "https://drive.google.com/drive/u/1/folders/1bs5K47XZwgF9f1X_E8bKLCQVQNTK62fZ"
+        },
+        {
+          "tag": "MATERIAL",
+          "title": "Alpha / Bravo Batch PDFs",
+          "desc": "Downloadable notes for both batches.",
+          "url": "https://e.pcloud.link/publink/show?code=kZOonGZaQCzWcgvsybXnKi5WVVBvV70e5Qk#/filemanager"
+        }
+      ]
+    },
+    {
+      "eyebrow": "FILE 05",
+      "title": "Community",
+      "note": "Announcements, doubts, and discussion.",
+      "items": [
+        {
+          "tag": "COMM",
+          "title": "Telegram Channel",
+          "desc": "Updates and announcements.",
+          "url": "https://t.me/tranquilizer014"
+        },
+        {
+          "tag": "COMM",
+          "title": "Reddit",
+          "desc": "Posts and discussion.",
+          "url": "https://www.reddit.com/u/tranquilizer014"
+        }
+      ]
+    }
+  ]
+}
