@@ -2,7 +2,7 @@
   "updated": "2026-08-27",
   "sections": [
     {
-      "eyebrow": "FILE 01",
+      "eyebrow": "01",
       "title": "Eligibility Tools",
       "note": "Check your attempts before you plan anything else.",
       "items": [
@@ -18,10 +18,11 @@
           "desc": "Find your last eligible CDS attempt by date of birth.",
           "url": "https://tranquilizer014.blogspot.com/2025/02/cds-eligibility-checker.html"
         }
-      ]
+      ],
+      "short": "Tools"
     },
     {
-      "eyebrow": "FILE 02",
+      "eyebrow": "02",
       "title": "Guides",
       "note": "Start here if you're new to the process.",
       "items": [
@@ -37,29 +38,31 @@
           "desc": "Full walkthrough of the Combined Defence Services entry.",
           "url": "https://tranquilizer014.blogspot.com/2025/02/combined-defence-services-cds.html"
         }
-      ]
+      ],
+      "short": "Guides"
     },
     {
-      "eyebrow": "FILE 03",
+      "eyebrow": "03",
       "title": "Prep Batches",
       "note": "Structured video courses with watch-progress tracking.",
       "items": [
         {
           "tag": "BATCH",
-          "title": "Bravo Batch — NDA",
+          "title": "Bravo Batch \u2014 NDA",
           "desc": "Full NDA video course, mark lectures done as you go.",
           "url": "https://tranquilizer014.blogspot.com/2026/05/bravo-batch.html"
         },
         {
           "tag": "BATCH",
-          "title": "Alpha Batch — CDS",
+          "title": "Alpha Batch \u2014 CDS",
           "desc": "Full CDS video course, mark lectures done as you go.",
           "url": "https://tranquilizer014.blogspot.com/2026/05/alpha-batch.html"
         }
-      ]
+      ],
+      "short": "Batches"
     },
     {
-      "eyebrow": "FILE 04",
+      "eyebrow": "04",
       "title": "Study Material",
       "note": "Lectures, themes, and downloadable notes.",
       "items": [
@@ -87,10 +90,11 @@
           "desc": "Downloadable notes for both batches.",
           "url": "https://e.pcloud.link/publink/show?code=kZOonGZaQCzWcgvsybXnKi5WVVBvV70e5Qk#/filemanager"
         }
-      ]
+      ],
+      "short": "Material"
     },
     {
-      "eyebrow": "FILE 05",
+      "eyebrow": "05",
       "title": "Community",
       "note": "Announcements, doubts, and discussion.",
       "items": [
@@ -106,7 +110,8 @@
           "desc": "Posts and discussion.",
           "url": "https://www.reddit.com/u/tranquilizer014"
         }
-      ]
+      ],
+      "short": "Community"
     }
   ]
 }
