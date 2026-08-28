@@ -6,231 +6,228 @@
 <title>Tranquilizer — All Work Combined</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#12181C;
-    --ink-soft:#1B2329;
-    --ink-line:#2C363D;
-    --paper:#EEE8D9;
-    --paper-dim:#C9C3B4;
-    --olive:#5C6E45;
-    --olive-light:#8AA06A;
-    --brass:#C9A227;
-    --signal:#B6402F;
-    --steel:#8B94A0;
-    --radius:2px;
+    --bg:#FAFAF9;
+    --surface:#FFFFFF;
+    --border:#E6E5E1;
+    --text:#17181A;
+    --text-muted:#6E6E68;
+    --text-faint:#A3A29C;
+    --accent:#3552F0;
+    --accent-soft:#EBEEFE;
+    --ok:#1E9E6B;
+    --warn:#D97A26;
+    --radius:12px;
+    --radius-sm:8px;
   }
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
   body{
-    background:var(--ink);
-    color:var(--paper);
-    font-family:'IBM Plex Sans',sans-serif;
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
     -webkit-font-smoothing:antialiased;
     line-height:1.5;
   }
-  ::selection{background:var(--brass);color:var(--ink);}
-
   a{color:inherit;text-decoration:none;}
 
   .wrap{
-    max-width:760px;
+    max-width:720px;
     margin:0 auto;
-    padding:0 20px 80px;
+    padding:0 20px 90px;
   }
 
   /* ---------- Header ---------- */
   header{
-    padding:36px 0 22px;
-    border-bottom:1px solid var(--ink-line);
-    margin-bottom:0;
+    padding:40px 0 22px;
   }
-  .callsign{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    letter-spacing:.18em;
-    color:var(--brass);
+  .eyebrow-top{
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--accent);
+    letter-spacing:.06em;
     text-transform:uppercase;
-    margin-bottom:10px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .callsign::before{
-    content:"";
-    width:6px;height:6px;
-    background:var(--brass);
-    display:inline-block;
-    border-radius:50%;
+    margin-bottom:8px;
   }
   h1{
-    font-family:'Oswald',sans-serif;
+    font-family:'Sora',sans-serif;
     font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:.02em;
-    font-size:clamp(32px,8vw,46px);
-    margin:0 0 6px;
-    color:var(--paper);
+    font-size:clamp(28px,7vw,38px);
+    line-height:1.15;
+    margin:0 0 10px;
+    letter-spacing:-.01em;
   }
-  h1 span{color:var(--olive-light);}
+  h1 .accent{color:var(--accent);}
   .subtitle{
-    font-size:14px;
-    color:var(--steel);
-    max-width:46ch;
+    font-size:15px;
+    color:var(--text-muted);
+    max-width:48ch;
   }
 
-  /* ---------- Sync strip (signature element) ---------- */
+  /* ---------- Sync line ---------- */
   .sync{
-    margin-top:22px;
-    border:1px solid var(--ink-line);
-    background:var(--ink-soft);
-    border-radius:var(--radius);
-    padding:12px 14px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-    flex-wrap:wrap;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    letter-spacing:.03em;
-  }
-  .sync-status{
+    margin-top:18px;
     display:flex;
     align-items:center;
     gap:8px;
+    font-size:12.5px;
+    color:var(--text-faint);
   }
   .dot{
-    width:8px;height:8px;
+    width:7px;height:7px;
     border-radius:50%;
-    background:var(--olive-light);
-    box-shadow:0 0 0 0 rgba(138,160,106,.6);
-    animation:pulse 2s infinite;
+    background:var(--ok);
+    flex:0 0 auto;
   }
-  .dot.offline{
-    background:var(--signal);
-    animation:none;
-    box-shadow:none;
+  .dot.offline{background:var(--warn);}
+
+  /* ---------- Filter chips (signature element) ---------- */
+  .chips{
+    position:sticky;
+    top:0;
+    z-index:10;
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:14px 0;
+    margin:8px -20px 0;
+    padding-left:20px;
+    padding-right:20px;
+    background:linear-gradient(var(--bg) 70%, rgba(250,250,249,0));
+    scrollbar-width:none;
   }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(138,160,106,.5);}
-    70%{box-shadow:0 0 0 6px rgba(138,160,106,0);}
-    100%{box-shadow:0 0 0 0 rgba(138,160,106,0);}
+  .chips::-webkit-scrollbar{display:none;}
+  .chip{
+    flex:0 0 auto;
+    font-size:13px;
+    font-weight:500;
+    padding:7px 14px;
+    border-radius:100px;
+    border:1px solid var(--border);
+    background:var(--surface);
+    color:var(--text-muted);
+    cursor:pointer;
+    white-space:nowrap;
+    transition:all .15s ease;
   }
-  .sync-label{color:var(--paper-dim);text-transform:uppercase;}
-  .sync-note{color:var(--steel);}
+  .chip:hover{border-color:var(--accent);color:var(--text);}
+  .chip.active{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#fff;
+  }
 
   /* ---------- Sections ---------- */
   .section{
-    margin-top:44px;
+    margin-top:38px;
+    scroll-margin-top:70px;
   }
   .section-head{
     display:flex;
-    align-items:baseline;
-    gap:12px;
-    border-bottom:1px solid var(--ink-line);
-    padding-bottom:10px;
+    align-items:center;
+    gap:10px;
     margin-bottom:4px;
   }
-  .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    color:var(--brass);
-    letter-spacing:.14em;
-    white-space:nowrap;
+  .section-index{
+    font-family:'Sora',sans-serif;
+    font-size:12px;
+    font-weight:600;
+    color:var(--accent);
+    background:var(--accent-soft);
+    width:24px;height:24px;
+    border-radius:7px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
   }
   .section-title{
-    font-family:'Oswald',sans-serif;
-    font-size:20px;
+    font-family:'Sora',sans-serif;
+    font-size:19px;
     font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:.03em;
-    color:var(--paper);
   }
   .section-note{
-    font-size:12.5px;
-    color:var(--steel);
-    margin:8px 0 14px;
+    font-size:13px;
+    color:var(--text-muted);
+    margin:6px 0 14px 34px;
   }
 
   .item{
     display:flex;
     align-items:center;
     gap:14px;
-    padding:14px 4px;
-    border-bottom:1px solid var(--ink-line);
-    transition:padding-left .15s ease, border-color .15s ease;
+    padding:14px;
+    margin-bottom:8px;
+    border-radius:var(--radius-sm);
+    border:1px solid var(--border);
+    background:var(--surface);
+    transition:border-color .15s ease, transform .1s ease, box-shadow .15s ease;
   }
-  .item:last-child{border-bottom:none;}
   .item:hover, .item:focus-visible{
-    padding-left:10px;
-    border-color:var(--olive-light);
+    border-color:var(--accent);
+    box-shadow:0 4px 14px rgba(53,82,240,.08);
     outline:none;
   }
   .item-tag{
     flex:0 0 auto;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:9.5px;
-    letter-spacing:.08em;
-    color:var(--ink);
-    background:var(--olive-light);
-    padding:3px 6px;
-    border-radius:var(--radius);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:4px 7px;
+    border-radius:5px;
     text-transform:uppercase;
-    min-width:56px;
-    text-align:center;
   }
   .item-body{flex:1 1 auto;min-width:0;}
   .item-title{
     font-weight:600;
-    font-size:15px;
-    color:var(--paper);
+    font-size:14.5px;
+    color:var(--text);
     margin-bottom:2px;
   }
   .item-desc{
     font-size:12.5px;
-    color:var(--steel);
+    color:var(--text-muted);
   }
   .item-arrow{
     flex:0 0 auto;
-    color:var(--paper-dim);
-    font-size:15px;
-    transform:translateX(0);
-    transition:transform .15s ease;
+    color:var(--text-faint);
+    font-size:16px;
+    transition:transform .15s ease, color .15s ease;
   }
-  .item:hover .item-arrow{transform:translateX(3px);color:var(--brass);}
+  .item:hover .item-arrow{transform:translateX(3px);color:var(--accent);}
 
   /* ---------- Footer ---------- */
   footer{
     margin-top:56px;
-    padding-top:20px;
-    border-top:1px solid var(--ink-line);
-    font-size:11.5px;
-    color:var(--steel);
+    padding-top:18px;
+    border-top:1px solid var(--border);
+    font-size:12px;
+    color:var(--text-faint);
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
-    gap:10px;
+    gap:8px;
   }
-  footer strong{color:var(--paper-dim);}
 
-  .loading, .error-state{
+  .loading{
     padding:40px 4px;
-    color:var(--steel);
+    color:var(--text-muted);
     font-size:13px;
-    font-family:'IBM Plex Mono',monospace;
   }
 
   @media (max-width:480px){
-    .wrap{padding:0 16px 60px;}
-    .item{gap:10px;}
-    .item-tag{min-width:48px;font-size:9px;}
+    .wrap{padding:0 16px 70px;}
+    .chips{margin:8px -16px 0;padding-left:16px;padding-right:16px;}
   }
 
   @media (prefers-reduced-motion: reduce){
-    .dot{animation:none;}
-    .item, .item-arrow{transition:none;}
+    html{scroll-behavior:auto;}
+    .item, .item-arrow, .chip{transition:none;}
   }
 </style>
 </head>
@@ -238,25 +235,26 @@
 <div class="wrap">
 
   <header>
-    <div class="callsign">Tranquilizer</div>
-    <h1>All Work <span>Combined</span></h1>
-    <div class="subtitle">One place for NDA / CDS prep — tools, guides, batches, material, and community.</div>
+    <div class="eyebrow-top">Tranquilizer</div>
+    <h1>All work, <span class="accent">combined</span>.</h1>
+    <div class="subtitle">Everything for NDA / CDS prep — tools, guides, batches, material, and community — in one place.</div>
 
     <div class="sync">
-      <div class="sync-status">
-        <span class="dot" id="syncDot"></span>
-        <span class="sync-label" id="syncLabel">Syncing…</span>
-      </div>
-      <div class="sync-note" id="syncNote">Requires internet to load the latest links</div>
+      <span class="dot" id="syncDot"></span>
+      <span id="syncLabel">Syncing…</span>
+      <span>·</span>
+      <span>Requires internet for the latest links</span>
     </div>
   </header>
 
+  <nav class="chips" id="chips"></nav>
+
   <main id="sections">
-    <div class="loading">Loading dossier…</div>
+    <div class="loading">Loading…</div>
   </main>
 
   <footer>
-    <span>Maintained by <strong>Tranquilizer</strong></span>
+    <span>Maintained by Tranquilizer</span>
     <span id="updatedFooter"></span>
   </footer>
 
@@ -264,24 +262,19 @@
 
 <script>
 /* =========================================================
-   CONFIG — edit this one line after you push data.json to GitHub
-   Recommended: use the jsDelivr CDN mirror of your repo, e.g.
-   https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/data.json
-   (jsDelivr is faster and more reliable than a raw.githubusercontent link)
+   CONFIG
    ========================================================= */
 const CONFIG = {
   dataUrl: "https://cdn.jsdelivr.net/gh/tranquilizer014/Tranquilizer_work@main/data.json",
   fetchTimeoutMs: 6000
 };
 
-/* Fallback copy — shown instantly and used if the live fetch fails
-   (e.g. no internet). Keep this roughly in sync manually if you want
-   offline viewers to see something reasonably current. */
+/* Fallback copy — used instantly if the live fetch fails (e.g. no internet) */
 const FALLBACK_DATA = {
   "updated": "2026-08-27",
   "sections": [
     {
-      "eyebrow": "FILE 01",
+      "eyebrow": "01",
       "title": "Eligibility Tools",
       "note": "Check your attempts before you plan anything else.",
       "items": [
@@ -297,10 +290,11 @@ const FALLBACK_DATA = {
           "desc": "Find your last eligible CDS attempt by date of birth.",
           "url": "https://tranquilizer014.blogspot.com/2025/02/cds-eligibility-checker.html"
         }
-      ]
+      ],
+      "short": "Tools"
     },
     {
-      "eyebrow": "FILE 02",
+      "eyebrow": "02",
       "title": "Guides",
       "note": "Start here if you're new to the process.",
       "items": [
@@ -316,10 +310,11 @@ const FALLBACK_DATA = {
           "desc": "Full walkthrough of the Combined Defence Services entry.",
           "url": "https://tranquilizer014.blogspot.com/2025/02/combined-defence-services-cds.html"
         }
-      ]
+      ],
+      "short": "Guides"
     },
     {
-      "eyebrow": "FILE 03",
+      "eyebrow": "03",
       "title": "Prep Batches",
       "note": "Structured video courses with watch-progress tracking.",
       "items": [
@@ -335,10 +330,11 @@ const FALLBACK_DATA = {
           "desc": "Full CDS video course, mark lectures done as you go.",
           "url": "https://tranquilizer014.blogspot.com/2026/05/alpha-batch.html"
         }
-      ]
+      ],
+      "short": "Batches"
     },
     {
-      "eyebrow": "FILE 04",
+      "eyebrow": "04",
       "title": "Study Material",
       "note": "Lectures, themes, and downloadable notes.",
       "items": [
@@ -366,10 +362,11 @@ const FALLBACK_DATA = {
           "desc": "Downloadable notes for both batches.",
           "url": "https://e.pcloud.link/publink/show?code=kZOonGZaQCzWcgvsybXnKi5WVVBvV70e5Qk#/filemanager"
         }
-      ]
+      ],
+      "short": "Material"
     },
     {
-      "eyebrow": "FILE 05",
+      "eyebrow": "05",
       "title": "Community",
       "note": "Announcements, doubts, and discussion.",
       "items": [
@@ -385,7 +382,8 @@ const FALLBACK_DATA = {
           "desc": "Posts and discussion.",
           "url": "https://www.reddit.com/u/tranquilizer014"
         }
-      ]
+      ],
+      "short": "Community"
     }
   ]
 };
@@ -403,17 +401,41 @@ function escapeHtml(str){
   return div.innerHTML;
 }
 
+function slugify(str){
+  return "sec-" + String(str).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 function render(data, isLive){
   const main = document.getElementById("sections");
+  const chips = document.getElementById("chips");
   main.innerHTML = "";
+  chips.innerHTML = "";
 
-  data.sections.forEach(section => {
+  const allChip = document.createElement("button");
+  allChip.className = "chip active";
+  allChip.textContent = "All";
+  allChip.onclick = () => setActiveChip(allChip);
+  chips.appendChild(allChip);
+
+  data.sections.forEach((section, i) => {
+    const id = slugify(section.title || ("section-" + i));
+
+    const chip = document.createElement("button");
+    chip.className = "chip";
+    chip.textContent = section.short || section.title;
+    chip.onclick = () => {
+      setActiveChip(chip);
+      document.getElementById(id).scrollIntoView({behavior:"smooth", block:"start"});
+    };
+    chips.appendChild(chip);
+
     const sec = document.createElement("section");
     sec.className = "section";
+    sec.id = id;
 
     const head = document.createElement("div");
     head.className = "section-head";
-    head.innerHTML = `<span class="eyebrow">${escapeHtml(section.eyebrow || "")}</span><span class="section-title">${escapeHtml(section.title || "")}</span>`;
+    head.innerHTML = `<span class="section-index">${escapeHtml(section.eyebrow || (i+1))}</span><span class="section-title">${escapeHtml(section.title || "")}</span>`;
     sec.appendChild(head);
 
     if(section.note){
@@ -443,25 +465,27 @@ function render(data, isLive){
     main.appendChild(sec);
   });
 
+  function setActiveChip(target){
+    chips.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+    target.classList.add("active");
+  }
+
   document.getElementById("updatedFooter").textContent = data.updated ? `Last updated ${data.updated}` : "";
 
   const dot = document.getElementById("syncDot");
   const label = document.getElementById("syncLabel");
-  const note = document.getElementById("syncNote");
   if(isLive){
     dot.classList.remove("offline");
-    label.textContent = "Live — synced just now";
-    note.textContent = "Requires internet to load the latest links";
+    label.textContent = "Live";
   } else {
     dot.classList.add("offline");
-    label.textContent = "Offline copy — showing saved version";
-    note.textContent = "Connect to the internet and reload for the latest links";
+    label.textContent = "Offline copy";
   }
 }
 
 async function init(){
   try {
-    if(CONFIG.dataUrl.startsWith("REPLACE_WITH")){
+    if(!CONFIG.dataUrl || CONFIG.dataUrl.startsWith("REPLACE_WITH")){
       throw new Error("no url configured yet");
     }
     const res = await withTimeout(fetch(CONFIG.dataUrl, {cache:"no-store"}), CONFIG.fetchTimeoutMs);
