@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tranquilizer — All Work Combined</title>
+<title>Tranquilizer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -65,6 +65,10 @@
     font-size:15px;
     color:var(--text-muted);
     max-width:48ch;
+  }
+  .subtitle strong{
+    color:var(--accent);
+    font-weight:600;
   }
 
   /* ---------- Sync line ---------- */
@@ -235,15 +239,12 @@
 <div class="wrap">
 
   <header>
-    <div class="eyebrow-top">Tranquilizer</div>
-    <h1>All work, <span class="accent">combined</span>.</h1>
-    <div class="subtitle">Everything for NDA / CDS prep — tools, guides, batches, material, and community — in one place.</div>
+    <h1>Tranquilizer</h1>
+    <div class="subtitle">All work of <strong>@tranquilizer014</strong> combined.</div>
 
     <div class="sync">
       <span class="dot" id="syncDot"></span>
       <span id="syncLabel">Syncing…</span>
-      <span>·</span>
-      <span>Requires internet for the latest links</span>
     </div>
   </header>
 
@@ -271,12 +272,33 @@ const CONFIG = {
 
 /* Fallback copy — used instantly if the live fetch fails (e.g. no internet) */
 const FALLBACK_DATA = {
-  "updated": "2026-08-27",
+  "updated": "2026-09-02",
   "sections": [
     {
       "eyebrow": "01",
-      "title": "Eligibility Tools",
-      "note": "Check your attempts before you plan anything else.",
+      "title": "Developer Portfolio",
+      "short": "Portfolio",
+      "note": "Apps and websites I've built.",
+      "items": [
+        {
+          "tag": "APP",
+          "title": "GeoCamera",
+          "desc": "Android app that stamps location, date, and time onto photos \u2014 auto or manual.",
+          "url": "https://github.com/tranquilizer014/GeoCamera"
+        },
+        {
+          "tag": "WEB",
+          "title": "PerthSmokers",
+          "desc": "E-commerce website designed for an Australian client.",
+          "url": "https://perthsmokers.vercel.app/"
+        }
+      ]
+    },
+    {
+      "eyebrow": "02",
+      "title": "Exam Resources",
+      "short": "Exam",
+      "note": "Everything for NDA / CDS prep.",
       "items": [
         {
           "tag": "TOOL",
@@ -289,15 +311,7 @@ const FALLBACK_DATA = {
           "title": "CDS Eligibility Checker",
           "desc": "Find your last eligible CDS attempt by date of birth.",
           "url": "https://tranquilizer014.blogspot.com/2025/02/cds-eligibility-checker.html"
-        }
-      ],
-      "short": "Tools"
-    },
-    {
-      "eyebrow": "02",
-      "title": "Guides",
-      "note": "Start here if you're new to the process.",
-      "items": [
+        },
         {
           "tag": "GUIDE",
           "title": "NDA Guide",
@@ -309,15 +323,7 @@ const FALLBACK_DATA = {
           "title": "CDS Guide",
           "desc": "Full walkthrough of the Combined Defence Services entry.",
           "url": "https://tranquilizer014.blogspot.com/2025/02/combined-defence-services-cds.html"
-        }
-      ],
-      "short": "Guides"
-    },
-    {
-      "eyebrow": "03",
-      "title": "Prep Batches",
-      "note": "Structured video courses with watch-progress tracking.",
-      "items": [
+        },
         {
           "tag": "BATCH",
           "title": "Bravo Batch \u2014 NDA",
@@ -329,15 +335,7 @@ const FALLBACK_DATA = {
           "title": "Alpha Batch \u2014 CDS",
           "desc": "Full CDS video course, mark lectures done as you go.",
           "url": "https://tranquilizer014.blogspot.com/2026/05/alpha-batch.html"
-        }
-      ],
-      "short": "Batches"
-    },
-    {
-      "eyebrow": "04",
-      "title": "Study Material",
-      "note": "Lectures, themes, and downloadable notes.",
-      "items": [
+        },
         {
           "tag": "MATERIAL",
           "title": "Essential YouTube Lectures",
@@ -362,12 +360,12 @@ const FALLBACK_DATA = {
           "desc": "Downloadable notes for both batches.",
           "url": "https://e.pcloud.link/publink/show?code=kZOonGZaQCzWcgvsybXnKi5WVVBvV70e5Qk#/filemanager"
         }
-      ],
-      "short": "Material"
+      ]
     },
     {
-      "eyebrow": "05",
-      "title": "Community",
+      "eyebrow": "03",
+      "title": "Community & Contact",
+      "short": "Community",
       "note": "Announcements, doubts, and discussion.",
       "items": [
         {
@@ -382,8 +380,7 @@ const FALLBACK_DATA = {
           "desc": "Posts and discussion.",
           "url": "https://www.reddit.com/u/tranquilizer014"
         }
-      ],
-      "short": "Community"
+      ]
     }
   ]
 };
@@ -476,10 +473,10 @@ function render(data, isLive){
   const label = document.getElementById("syncLabel");
   if(isLive){
     dot.classList.remove("offline");
-    label.textContent = "Live";
+    label.textContent = "Live — links up to date";
   } else {
     dot.classList.add("offline");
-    label.textContent = "Offline copy";
+    label.textContent = "Needs internet to fetch the latest links";
   }
 }
 
@@ -499,5 +496,8 @@ async function init(){
 
 init();
 </script>
+
+<script data-goatcounter="https://tranquilizer014.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
