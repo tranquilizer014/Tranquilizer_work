@@ -10,7 +10,7 @@
         {
           "tag": "APP",
           "title": "GeoCamera",
-          "desc": "Android app that stamps location, date, and time onto photos and videos \u2014 auto or manual.",
+          "desc": "Android app that stamps location, date, and time onto photos — auto or manual.",
           "url": "https://github.com/tranquilizer014/GeoCamera"
         },
         {
@@ -53,15 +53,21 @@
         },
         {
           "tag": "BATCH",
-          "title": "Bravo Batch \u2014 NDA",
+          "title": "Bravo Batch — NDA",
           "desc": "Full NDA video course, mark lectures done as you go.",
           "url": "https://tranquilizer014.blogspot.com/2026/05/bravo-batch.html"
         },
         {
           "tag": "BATCH",
-          "title": "Alpha Batch \u2014 CDS",
+          "title": "Alpha Batch — CDS",
           "desc": "Full CDS video course, mark lectures done as you go.",
           "url": "https://tranquilizer014.blogspot.com/2026/05/alpha-batch.html"
+        },
+        {
+          "tag": "BATCH",
+          "title": "Golf Batch — CDS",
+          "desc": "Full CDS video course, mark lectures done as you go.",
+          "url": "https://tranquilizer014.github.io/Golf-Batch/"
         },
         {
           "tag": "MATERIAL",
@@ -86,13 +92,7 @@
           "title": "Alpha / Bravo Batch PDFs",
           "desc": "Downloadable notes for both batches.",
           "url": "https://e.pcloud.link/publink/show?code=kZOonGZaQCzWcgvsybXnKi5WVVBvV70e5Qk#/filemanager"
-        },
-        {
-          "tag": "BATCH",
-          "title": "Golf Batch \u2014 CDS",
-          "desc": "Full CDS video course, mark lectures done as you go.",
-          "url": "https://tranquilizer014.github.io/Golf-Batch/"
-        },
+        }
       ]
     },
     {
