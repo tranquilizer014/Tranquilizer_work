@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02",
+  "updated": "2026-09-21",
   "sections": [
     {
       "eyebrow": "01",
@@ -10,7 +10,7 @@
         {
           "tag": "APP",
           "title": "GeoCamera",
-          "desc": "Android app that stamps location, date, and time onto photos — auto or manual.",
+          "desc": "Android app that stamps location, date, and time onto photos and videos — auto or manual.",
           "url": "https://github.com/tranquilizer014/GeoCamera"
         },
         {
